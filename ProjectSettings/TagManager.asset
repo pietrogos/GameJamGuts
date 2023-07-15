@@ -8,6 +8,7 @@ TagManager:
   - IceAura
   - Undefined
   - FireAura
+  - MetalAura
   layers:
   - Default
   - TransparentFX

@@ -16,8 +16,19 @@ public class Beam : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+
+             Devourer devourer = other.gameObject.GetComponent<Devourer>();
+            
+            // Check if the player has an active Shield
+            if (devourer.transform.Find("Shield(Clone)") != null)
+            {
+                // If the Shield is active, don't do damage and destroy the beam
+                Destroy(gameObject);
+                return;
+            }
+
             // Reduce the player's hunger
-            other.gameObject.GetComponent<Devourer>().DecreaseHunger(damage);
+            devourer.DecreaseHunger(damage);
 
             // Destroy the beam
             Destroy(gameObject);

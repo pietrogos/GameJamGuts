@@ -27,5 +27,10 @@ public class Beam : MonoBehaviour
             // If the beam hits an IceAura, slow down the beam
             GetComponent<Rigidbody>().velocity *= 0.3f;
         }
+        else if (other.gameObject.CompareTag("FireAura"))
+        {
+            // If the beam hits a FireAura, destroy the beam
+            Destroy(gameObject);
+        }
     }
 }

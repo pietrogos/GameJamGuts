@@ -51,6 +51,12 @@ public class Devourer : MonoBehaviour
                 icePowerUp.Activate(gameObject);
             }
 
+            FirePlanetPowerUp firePowerUp = other.gameObject.GetComponent<FirePlanetPowerUp>();
+            if (firePowerUp != null)
+            {
+                firePowerUp.Activate(gameObject);
+            }
+
             maxHunger += other.gameObject.transform.localScale.x * 0.5f;
             hunger = maxHunger; // Refill hunger when devouring a planet
         }

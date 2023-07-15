@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a15742fe0ed62584b8987b33fe3ee99a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - beamPrefab: {fileID: 391238130759160058, guid: 6f67dcaf43409f44197f999231acecea,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

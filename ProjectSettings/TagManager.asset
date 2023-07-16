@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - FireAura
   - MetalAura
+  - Enemy
   layers:
   - Default
   - TransparentFX

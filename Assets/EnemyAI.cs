@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform player; // Reference to the player's transform
+    public Transform player; // Reference to the player's game object
     public float speed = 5f; // Enemy speed
+    public float rotationSpeed = 5f; // Enemy rotation speed
     public float stopDistance = 2f; // Distance at which enemy stops moving towards the player
     public float stopMargin = 0.1f; // Margin around stopDistance to prevent oscillations
     public float raycastDistance = 5f; // Distance of avoidance raycast
@@ -36,13 +37,19 @@ public class EnemyAI : MonoBehaviour
         // If the player is farther than stopDistance plus margin, move towards the player
         if (distanceToPlayer > stopDistance + stopMargin)
         {
-            transform.position += directionToPlayer * speed * Time.deltaTime;
+            Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         }
         // If the player is closer than stopDistance minus margin, move away from the player
         else if (distanceToPlayer < stopDistance - stopMargin)
         {
-            transform.position -= directionToPlayer * speed * Time.deltaTime;
+            Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, -speed * Time.deltaTime);
         }
+
+        // Rotate towards the player
+        Quaternion toRotation = Quaternion.LookRotation(new Vector3(directionToPlayer.x, 0, directionToPlayer.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
 
         // Fire at the player
         fireTimer += Time.deltaTime;

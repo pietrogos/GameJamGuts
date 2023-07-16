@@ -11,6 +11,7 @@ public class MetalPlanetPowerUp : MonoBehaviour
     {
         // Instantiate Shield and make it a child of the player
         GameObject shield = Instantiate(shieldPrefab, player.transform.position, Quaternion.identity);
+        shield.layer = LayerMask.NameToLayer("Aura");
         shield.transform.parent = player.transform;
         shield.transform.localScale = player.transform.localScale * 2;
 

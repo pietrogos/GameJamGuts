@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6298593113555411413}
   - component: {fileID: 250495907914499518}
   - component: {fileID: 2749802386670136215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireAura
   m_TagString: FireAura
   m_Icon: {fileID: 0}

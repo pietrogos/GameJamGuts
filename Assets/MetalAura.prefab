@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8516079155820257055}
   - component: {fileID: 8570093133176796693}
   - component: {fileID: -75618798748437294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MetalAura
   m_TagString: MetalAura
   m_Icon: {fileID: 0}

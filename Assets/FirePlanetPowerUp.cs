@@ -11,6 +11,7 @@ public class FirePlanetPowerUp : MonoBehaviour
     {
         // Instantiate FireAura and make it a child of the player
         GameObject fireAura = Instantiate(fireAuraPrefab, player.transform.position, Quaternion.identity);
+        fireAura.layer = LayerMask.NameToLayer("Aura");
         fireAura.transform.parent = player.transform;
         fireAura.transform.localScale = player.transform.localScale * 3;
 

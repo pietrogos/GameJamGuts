@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2292570781033318562}
   - component: {fileID: 2247118026549221152}
   - component: {fileID: 3649913793426197030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceAura
   m_TagString: IceAura
   m_Icon: {fileID: 0}

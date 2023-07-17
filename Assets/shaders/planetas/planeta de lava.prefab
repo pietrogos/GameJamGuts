@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2683714880846939655}
   - component: {fileID: 6418760004776358469}
   - component: {fileID: 3898310267379388960}
+  - component: {fileID: 2547927819346774847}
   m_Layer: 0
   m_Name: planeta de lava
   m_TagString: Untagged
@@ -105,3 +106,16 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2547927819346774847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654537218199681469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465c10b7e5a52142ab82c38fdeeefc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 4

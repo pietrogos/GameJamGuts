@@ -16,8 +16,38 @@ public class EnemyAI : MonoBehaviour
 
     private float fireTimer = 0f; // Time since last fired
 
+    private bool isFrozen = false;
+    private bool isDeactivated = false;
+
+    public void Freeze(float duration)
+    {
+        StartCoroutine(FreezeRoutine(duration));
+    }
+
+    public void Deactivate(float duration)
+    {
+        StartCoroutine(DeactivateRoutine(duration));
+    }
+
+    private IEnumerator FreezeRoutine(float duration)
+    {
+        isFrozen = true;
+        yield return new WaitForSeconds(duration);
+        isFrozen = false;
+    }
+
+    private IEnumerator DeactivateRoutine(float duration)
+    {
+        isDeactivated = true;
+        yield return new WaitForSeconds(duration);
+        isDeactivated = false;
+    }
+
     private void Update()
     {
+        // Prevent movement and rotation if the enemy is frozen
+        if (isFrozen) return;
+
         // Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -53,7 +83,7 @@ public class EnemyAI : MonoBehaviour
 
         // Fire at the player
         fireTimer += Time.deltaTime;
-        if (fireTimer > 1f / fireRate)
+        if (fireTimer > 1f / fireRate  && !isDeactivated)
         {
             fireTimer = 0f;
             GameObject beam = Instantiate(beamPrefab, transform.position, Quaternion.identity);

@@ -672,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 4510774735928710090, guid: f74c5e3d8e59f93418f25fa793de7573,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.634858
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 4510774735928710090, guid: f74c5e3d8e59f93418f25fa793de7573,
         type: 3}
@@ -1131,6 +1131,21 @@ MonoBehaviour:
   hunger: 100
   maxHunger: 100
   depletionPercent: 0.01
+  iceAuraPrefab: {fileID: 6426288059302501648, guid: 0b22fe21d9cc568469f5b365cc0c0be0,
+    type: 3}
+  fireAuraPrefab: {fileID: 2793049770426144293, guid: fe11a713ba152b449bb3e1b3a39f16f0,
+    type: 3}
+  metalAuraPrefab: {fileID: 1574075978015087138, guid: 4ea97d245e9e96744b57760e9c7cf59a,
+    type: 3}
+  iceMetalAuraPrefab: {fileID: 2241212906012288172, guid: 3d4f7edbce8343549b4387766618f704,
+    type: 3}
+  fireMetalAuraPrefab: {fileID: 3690679909497262892, guid: e96e20a311f5da14598d480fb00a2157,
+    type: 3}
+  shockwavePrefab: {fileID: 4185465600314315129, guid: 996cf80e6d9e86948a2531d0ea4d2d7c,
+    type: 3}
+  blackHolePrefab: {fileID: 0}
+  heatWavePrefab: {fileID: 8356444587087579699, guid: d1e890a5afdf2f94a9e491ef443f61d3,
+    type: 3}
 --- !u!4 &983227566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 820a8812476c46e4690c1c7cfd34cd65,
@@ -1414,8 +1429,8 @@ MonoBehaviour:
     type: 3}
   minEnemies: 2
   maxEnemies: 2
-  spawnIntervalMin: 8
-  spawnIntervalMax: 12
+  spawnIntervalMin: 0
+  spawnIntervalMax: 0
   spawnRadius: 50
   maxEnemiesOnScene: 2
 --- !u!1001 &1442836083
@@ -1444,7 +1459,7 @@ PrefabInstance:
     - target: {fileID: 2029809126355767435, guid: 73d07f0ab3e6f2346a876c97323f23db,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.935007
+      value: -5.81
       objectReference: {fileID: 0}
     - target: {fileID: 2029809126355767435, guid: 73d07f0ab3e6f2346a876c97323f23db,
         type: 3}
@@ -2078,7 +2093,7 @@ PrefabInstance:
     - target: {fileID: 6085807188287575712, guid: d2f204930f14d8a4fa4deda24076f470,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.03
+      value: 4.42
       objectReference: {fileID: 0}
     - target: {fileID: 6085807188287575712, guid: d2f204930f14d8a4fa4deda24076f470,
         type: 3}
@@ -2088,7 +2103,7 @@ PrefabInstance:
     - target: {fileID: 6085807188287575712, guid: d2f204930f14d8a4fa4deda24076f470,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 3.93
       objectReference: {fileID: 0}
     - target: {fileID: 6085807188287575712, guid: d2f204930f14d8a4fa4deda24076f470,
         type: 3}

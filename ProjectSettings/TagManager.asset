@@ -10,6 +10,12 @@ TagManager:
   - FireAura
   - MetalAura
   - Enemy
+  - TrackingObject
+  - Actors
+  - IceMetalAura
+  - FireMetalAura
+  - Heatwave
+  - Shockwave
   layers:
   - Default
   - TransparentFX
@@ -19,10 +25,10 @@ TagManager:
   - UI
   - 
   - pixel
-  - 
-  - 
-  - 
-  - 
+  - Aura
+  - Projectile
+  - Enemy
+  - Wave
   - 
   - 
   - 

@@ -121,8 +121,8 @@ MonoBehaviour:
   raycastDistance: 200
   beamPrefab: {fileID: 391238130759160058, guid: 6f67dcaf43409f44197f999231acecea,
     type: 3}
-  fireRate: 5
-  beamSpeed: 20
+  fireRate: 1
+  beamSpeed: 10
 --- !u!136 &2072474273658686865
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class Devourer : MonoBehaviour
     private bool hasIceAura = false;
     private bool hasMetalAura = false;
     private bool hasFireAura = false;
+
     // Keep track of the aura game objects
     private GameObject activeIceAura = null;
     private GameObject activeFireAura = null;
@@ -34,6 +35,32 @@ public class Devourer : MonoBehaviour
     private GameObject activeIceMetalAura = null;
     private GameObject activeFireMetalAura = null;
 
+    public Material iceMaterial;
+    public Material fireMaterial;
+    public Material metalMaterial;
+
+    private Renderer monsterRenderer;
+
+    void TransformMonster(string type)
+    {
+        if (monsterRenderer == null) return;
+
+        switch (type.ToLower())
+        {
+            case "ice":
+                monsterRenderer.material = iceMaterial;
+                break;
+            case "fire":
+                monsterRenderer.material = fireMaterial;
+                break;
+            case "metal":
+                monsterRenderer.material = metalMaterial;
+                break;
+            default:
+                Debug.LogError("Invalid monster type: " + type);
+                return;
+        }
+    }
 
     public void DecreaseHunger(float amount)
     {
@@ -244,7 +271,7 @@ public class Devourer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        monsterRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     // Update is called once per frame
@@ -274,18 +301,21 @@ public class Devourer : MonoBehaviour
             if (icePowerUp != null)
             {
                 ActivateIcePowerUp(icePowerUp);
+                TransformMonster("ice");
             }
 
             FirePlanetPowerUp firePowerUp = other.gameObject.GetComponent<FirePlanetPowerUp>();
             if (firePowerUp != null)
             {
                 ActivateFirePowerUp(firePowerUp);
+                TransformMonster("fire");
             }
 
             MetalPlanetPowerUp metalPowerUp = other.gameObject.GetComponent<MetalPlanetPowerUp>();
             if (metalPowerUp != null)
             {
                 ActivateMetalPowerUp(metalPowerUp);
+                TransformMonster("metal");
             }
 
             maxHunger += other.gameObject.transform.localScale.x * 0.5f;

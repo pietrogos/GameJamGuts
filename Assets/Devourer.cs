@@ -294,6 +294,8 @@ public class Devourer : MonoBehaviour
         {
             Destroy(other.gameObject);
             float growthRate = other.gameObject.transform.localScale.x * 0.5f;
+            PlayerController.speed += 0.1f;
+            Debug.Log("Speed: " + PlayerController.speed);
             transform.localScale = transform.localScale + new Vector3(growthRate, growthRate, growthRate);
 
             // Check for power-up and activate it

@@ -11,10 +11,19 @@ public class botaocarregarfase : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void Retry()
+    {
+        SceneManager.LoadScene("fase 1 MAIN");
+    }
+
     // Update is called once per frame
     public void Quit()
     {
         Application.Quit();
         Debug.Log("player quit");
+    }
+    public void inicio()
+    {
+        SceneManager.LoadScene("inicio");
     }
 }

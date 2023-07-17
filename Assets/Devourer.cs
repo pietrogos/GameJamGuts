@@ -271,7 +271,7 @@ public class Devourer : MonoBehaviour
         if (other.tag != "Beam" && transform.localScale.x >= other.gameObject.transform.localScale.x)
         {
             Destroy(other.gameObject);
-            float growthRate = other.gameObject.transform.localScale.x * 0.5f;
+            float growthRate = other.gameObject.transform.localScale.x * 0.02f;
             transform.localScale = transform.localScale + new Vector3(growthRate, growthRate, growthRate);
 
             // Check for power-up and activate it

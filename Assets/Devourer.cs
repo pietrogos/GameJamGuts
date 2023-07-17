@@ -6,7 +6,7 @@ public class Devourer : MonoBehaviour
 {
     public float hunger = 100f;
     public float maxHunger = 100f;
-    public float depletionPercent = 0.01f;      
+    public float depletionPercent = 0.01f;
     private float depletionRate;
 
     public GameObject iceAuraPrefab;
@@ -27,7 +27,6 @@ public class Devourer : MonoBehaviour
     private bool hasIceAura = false;
     private bool hasMetalAura = false;
     private bool hasFireAura = false;
-    
     // Keep track of the aura game objects
     private GameObject activeIceAura = null;
     private GameObject activeFireAura = null;
@@ -54,7 +53,7 @@ public class Devourer : MonoBehaviour
         activeIcePowerUp = powerUp;
         hasIceAura = true;
 
-        if(CheckCombos() == false)
+        if (CheckCombos() == false)
         {
             CancelInvoke(nameof(DeactivateIcePowerUp));
             Invoke(nameof(DeactivateIcePowerUp), powerUp.duration);
@@ -73,7 +72,7 @@ public class Devourer : MonoBehaviour
         activeFirePowerUp = powerUp;
         hasFireAura = true;
 
-        if(CheckCombos() == false)
+        if (CheckCombos() == false)
         {
             CancelInvoke(nameof(DeactivateFirePowerUp));
             Invoke(nameof(DeactivateFirePowerUp), powerUp.duration);
@@ -92,7 +91,7 @@ public class Devourer : MonoBehaviour
         activeMetalPowerUp = powerUp;
         hasMetalAura = true;
 
-        if(CheckCombos() == false)
+        if (CheckCombos() == false)
         {
             CancelInvoke(nameof(DeactivateMetalPowerUp));
             Invoke(nameof(DeactivateMetalPowerUp), powerUp.duration);
@@ -107,7 +106,6 @@ public class Devourer : MonoBehaviour
 
         // Instantiate a shockwave that stuns enemies
         GameObject shockwave = Instantiate(shockwavePrefab, transform.position, Quaternion.identity);
-        
         // Set the shockwave's initial scale to the monster's scale
         shockwave.transform.localScale = transform.localScale;
     }
@@ -129,7 +127,6 @@ public class Devourer : MonoBehaviour
 
         // Instantiate a heatwave that deactivates enemy systems
         GameObject heatWave = Instantiate(heatWavePrefab, transform.position, Quaternion.identity);
-        
         // Set the heatwave's initial scale to the monster's scale
         heatWave.transform.localScale = transform.localScale;
 
@@ -151,7 +148,6 @@ public class Devourer : MonoBehaviour
             activeIceMetalAura.transform.localScale = transform.localScale * 4;
             activeIceMetalAura.tag = "IceMetalAura";
         }
-        
         // Destroy the shield after 15 seconds
         Invoke(nameof(DeactivateIceMetalCombo), 15f);
     }
@@ -241,15 +237,15 @@ public class Devourer : MonoBehaviour
         }
         else
         {
-            Debug.Log("Não tem combo");
+            Debug.Log("N�o tem combo");
             return false;
-        } 
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -271,7 +267,7 @@ public class Devourer : MonoBehaviour
         if (other.tag != "Beam" && transform.localScale.x >= other.gameObject.transform.localScale.x)
         {
             Destroy(other.gameObject);
-            float growthRate = other.gameObject.transform.localScale.x * 0.02f;
+            float growthRate = other.gameObject.transform.localScale.x * 0.5f;
             transform.localScale = transform.localScale + new Vector3(growthRate, growthRate, growthRate);
 
             // Check for power-up and activate it

@@ -154,7 +154,6 @@ public class Devourer : MonoBehaviour
 
     void ExecuteTripleCombo()
     {
-        Debug.Log("Ativou o caralho");
         DeactivateIcePowerUp();
         DeactivateFirePowerUp();
         DeactivateMetalPowerUp();

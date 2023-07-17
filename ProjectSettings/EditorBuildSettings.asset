@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/fase 1 MAIN.unity
     guid: 0824c631c651d554ea9290e2b9499710
+  - enabled: 1
+    path: Assets/Scenes/game over.unity
+    guid: 910d8974bedd8724c80ba4a63c13bfc2
   m_configObjects: {}

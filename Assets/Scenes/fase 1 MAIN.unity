@@ -7552,7 +7552,6 @@ GameObject:
   - component: {fileID: 1180823498}
   - component: {fileID: 1180823497}
   - component: {fileID: 1180823496}
-  - component: {fileID: 1180823499}
   m_Layer: 5
   m_Name: HungerBar
   m_TagString: Untagged
@@ -7572,7 +7571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520612f8c3f812848b0cf7b363de72ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devourer: {fileID: 0}
+  devourer: {fileID: 2068860811}
 --- !u!114 &1180823497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7647,19 +7646,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -226}
   m_SizeDelta: {x: 300, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1180823499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180823495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 520612f8c3f812848b0cf7b363de72ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  devourer: {fileID: 0}
 --- !u!1001 &1180936182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12198,6 +12184,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &2068860811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7092927620091149429, guid: d8446807e287f114e99987f3f3e9f7c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 807545823}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068860795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bff4def3523c2445aaedd510d4755a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2078593124
 GameObject:
   m_ObjectHideFlags: 0
@@ -13460,7 +13458,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111319442}
-  m_LocalRotation: {x: 0.22109185, y: -0, z: -0, w: 0.975253}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: -13.16, y: 8.39, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13468,7 +13466,7 @@ Transform:
   - {fileID: 2078593125}
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 25.546, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!114 &2111319446
 MonoBehaviour:
   m_ObjectHideFlags: 0

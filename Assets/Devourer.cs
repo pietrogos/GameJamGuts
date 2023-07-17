@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Devourer : MonoBehaviour
 {
@@ -284,7 +285,7 @@ public class Devourer : MonoBehaviour
         if (hunger <= 0)
         {
             // Game over
-            Debug.Log("Game Over");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

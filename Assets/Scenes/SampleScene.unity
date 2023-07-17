@@ -860,7 +860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0598ddb65c8306a42952f5b9700a7859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
 --- !u!114 &983227565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,6 +890,9 @@ MonoBehaviour:
   blackHolePrefab: {fileID: 0}
   heatWavePrefab: {fileID: 8356444587087579699, guid: d1e890a5afdf2f94a9e491ef443f61d3,
     type: 3}
+  iceMaterial: {fileID: 2100000, guid: 0b75c2da95697684ea7d6d6764190f9c, type: 2}
+  fireMaterial: {fileID: 2100000, guid: 87cc67ada3b8cc74ba490b1df8a0c45e, type: 2}
+  metalMaterial: {fileID: 2100000, guid: 7389c27aaf7e25a44a1b82277ab27363, type: 2}
 --- !u!4 &983227566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 820a8812476c46e4690c1c7cfd34cd65,
